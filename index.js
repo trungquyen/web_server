@@ -1,7 +1,6 @@
 import express from "express";
 import dotenv from "dotenv"
 import db from "./src/database/index.js";
-import adminRoute from "./src/routes/adminRoute.js"
 import userRoutes from "./src/routes/userRoutes.js";
 import productRoute from "./src/routes/productRoute.js";
 import cartRoutes from "./src/routes/cartRoute.js";
@@ -17,7 +16,6 @@ db()
 app.use(express.json());
 app.use(cors());
 app.use(morgan("common"));
-//app.use("/admin", adminRoute);
 app.use("/users", userRoutes);
 app.use("/product", productRoute);
 app.use("/cart", cartRoutes);
