@@ -1,20 +1,20 @@
-import express from "express";
-import AdminModel from "../models/AdminModel.js";
-import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
+// import express from "express";
+// import AdminModel from "../models/AdminModel.js";
+// import jwt from "jsonwebtoken";
+// import dotenv from "dotenv";
 
-dotenv.config();
-import { adminControllers } from "../controllers/adminControllers.js";
-const router = express.Router();
+// dotenv.config();
+// import { adminControllers } from "../controllers/adminControllers.js";
+// const router = express.Router();
 
-router.get("/", async (req, res) => {
-  try {
-    const Admin = await AdminModel.find();
-    res.status(200).json(Admin);
-  } catch (error) {
-    res.status(500).json(error);
-  }
-});
+// router.get("/", async (req, res) => {
+//   try {
+//     const Admin = await AdminModel.find();
+//     res.status(200).json(Admin);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
 
 // router.post("/new", async (req, res) => {
 //   try {
@@ -37,6 +37,6 @@ router.get("/", async (req, res) => {
 //   }
 // });
 
-router.post("/new", adminControllers.addAdmin);
+// router.post("/new", adminControllers.addAdmin);
 
-export default router;
+// export default router;

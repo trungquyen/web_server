@@ -19,10 +19,10 @@ app.use(cors());
 app.use(morgan("common"));
 //app.use("/admin", adminRoute);
 app.use("/users", userRoutes);
-// app.use("/product", productRoute);
-// app.use("/cart", cartRoutes);
-// app.use("/checkout", checkoutRote);
-// app.use("/comment", commentRoute);
+app.use("/product", productRoute);
+app.use("/cart", cartRoutes);
+app.use("/checkout", checkoutRote);
+app.use("/comment", commentRoute);
 app.listen(process.env.PORT || 8000, async () => {
     console.log("Server is running");
 });
